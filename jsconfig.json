@@ -11,8 +11,9 @@
 		"strict": true,
 		"moduleResolution": "bundler",
 		"lib": [
-			"Webworker"
-		]
+			"es2015",
+		],
+		"target": "es2015",
 	}
 	// Path aliases are handled by https://svelte.dev/docs/kit/configuration#alias
 	// except $lib which is handled by https://svelte.dev/docs/kit/configuration#files

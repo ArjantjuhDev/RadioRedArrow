@@ -3,33 +3,59 @@
 		<div>
 			<!-- svelte-ignore a11y_missing_attribute -->
 			<img
-				class="cc_streaminfo image-full h-32 w-32 rounded-md border border-white"
+				class="cc_streaminfo h-32 w-32 rounded-md border border-white"
 				data-type="trackimageurl"
 				data-username="stef"
+				aria-label="Now playing"
 			/>
 		</div>
 	</div>
 	<div class="mt-3 flex w-full justify-center">
 		<div class="flex w-3/4 flex-row justify-between max-tablet:w-full" id="cc_tunein">
 			<a href="https://cast6.asurahosting.com/tunein/stef.pls"
-				><img class="w-10" src="/Winamp-logo.png" alt="Winamp, iTunes" title="Winamp, iTunes" /></a
+				><img
+					class="w-10"
+					src="/Winamp-logo.png"
+					alt="Winamp, iTunes"
+					aria-label="Winamp, iTunes"
+					title="Winamp, iTunes"
+				/></a
 			>
 			<a href="https://cast6.asurahosting.com/tunein/stef.asx"
 				><img
 					class="w-10"
 					src="/win-player.png"
 					alt="Windows Media Player"
+					aria-label="Windows Media Player"
 					title="Windows Media Player"
 				/></a
 			>
 			<a href="https://cast6.asurahosting.com/tunein/stef.ram"
-				><img class="w-10" src="/Realplayer.png" alt="Real Player" title="Real Player" /></a
+				><img
+					class="w-10"
+					src="/Realplayer.png"
+					alt="Real Player"
+					aria-label="Real Player"
+					title="Real Player"
+				/></a
 			>
 			<a href="https://cast6.asurahosting.com/tunein/stef.qtl"
-				><img class="w-10" src="/QuickTime.png" alt="QuickTime" title="QuickTime" /></a
+				><img
+					class="w-10"
+					src="/QuickTime.png"
+					alt="QuickTime"
+					aria-label="QuickTime"
+					title="QuickTime"
+				/></a
 			>
 			<a href="https://cast6.my-control-panel.com/stream/stef/stream.pls"
-				><img class="w-10" src="/StreamProxy.png" alt="Stream Proxy" title="Stream Proxy" /></a
+				><img
+					class="w-10"
+					src="/StreamProxy.png"
+					alt="Stream Proxy"
+					aria-label="Stream Proxy"
+					title="Stream Proxy"
+				/></a
 			>
 		</div>
 	</div>

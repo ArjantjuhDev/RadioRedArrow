@@ -1,7 +1,10 @@
-import { STRATO_EMAIL } from "$env/static/private";
-import transporter from "$lib/emailSetup.server.js";
+export const prerender = 'auto';
+// @ts-ignore
+import { SMTP_EMAIL } from "$env/static/private";
+import transporter from "./../api/send-mail/+server.js";
 
 export const actions = {
+    // @ts-ignore
     default: async ({ request }) => {
         try {
             const formData = await request.formData();
@@ -28,7 +31,7 @@ export const actions = {
             <p>Team Radio Red Arrow</p>`;
 
             const message = {
-                to: STRATO_EMAIL,
+                to: SMTP_EMAIL,
                 bcc: email,
                 subject: subject,
                 email: email,
@@ -41,7 +44,7 @@ export const actions = {
             // @ts-ignore
             const sendEmail = async (message) => {
                 await new Promise((resolve, reject) => {
-                    transporter.sendMail(message, (err, info) => {
+                    transporter.sendMail(message, (/** @type {any} */ err, /** @type {any} */ info) => {
                         if (err) {
                             console.error(err);
                             reject(err);
@@ -63,4 +66,3 @@ export const actions = {
     }
 };
 
-  

@@ -1,4 +1,8 @@
-<div class=" whitespace-normal text-center">
+<svelte:head>
+	<title>Home</title>
+</svelte:head>
+
+<div aria-hidden="true" class=" whitespace-normal text-center">
 	<p>🎙️ Welkom bij Radio Red Arrow Jouw pijlsnelle route naar de beste muziek! 🎶</p>
 	<p class="mt-2">
 		Stap in en laat je meevoeren door een stroom van de grootste hits, de nieuwste tracks, en

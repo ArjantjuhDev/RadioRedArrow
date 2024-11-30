@@ -6,10 +6,10 @@
 				src="https://serv4.verzoeksysteem.nl/djdisplay/?rs=16790"
 				scrolling="no"
 				frameborder="no"
-				align="center"
+				title="DJ Display"
 				height="175px"
 				width="175px"
-				class="rounded-lg"
+				class="rounded-lg items-center"
 			></iframe>
 		</div>
 	</div>

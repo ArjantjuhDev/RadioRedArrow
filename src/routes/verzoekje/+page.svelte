@@ -3,7 +3,7 @@
 </svelte:head>
 
 <div class="mx-auto flex w-full flex-col">
-	<div class="flex w-full justify-center">
+	<div aria-hidden="true" class="flex w-full justify-center">
 		<h1 class="h1 font-serif text-5xl font-semibold">VERZOEKJE</h1>
 	</div>
 	<div class="flex w-full items-center justify-center">
@@ -12,10 +12,10 @@
 			src="https://serv4.verzoeksysteem.nl/verzoek/?rs=16790"
 			scrolling="no"
 			frameborder="no"
-			align="center"
+			title="Verzoek"
 			height="650px"
 			width="485px"
-			class="rounded-lg"
+			class="items-center rounded-lg"
 		></iframe>
 	</div>
 	<div class="divider my-5 w-full text-3xl font-bold">of</div>
@@ -31,13 +31,13 @@
 		<div class="flex w-full flex-row items-center justify-evenly">
 			<div>
 				<!-- svelte-ignore a11y_missing_attribute -->
-				<img src="/whatsapp.png" />
+				<img alt="whatsapp" aria-label="whatsapp" src="/whatsapp.png" />
 			</div>
 			<div>
 				<!-- svelte-ignore a11y_missing_attribute -->
-				<img src="/arrow.gif" width="48px" height="48px" />
+				<img alt="arrow" aria-label="arrow" src="/arrow.gif" width="48px" height="48px" />
 			</div>
-			<div>
+			<div aria-hidden="true">
 				<h2 class="h2 text-6xl font-bold">klik hier</h2>
 			</div>
 		</div>

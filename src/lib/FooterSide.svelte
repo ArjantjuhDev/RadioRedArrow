@@ -22,7 +22,7 @@
 	<div
 		class="md:place-self-center md:justify-self-end ml-64 grid-flow-col items-center justify-center gap-4"
 	>
-		<img src="/music.png" alt="listeners" width="32px" height="32px" />
+		<img src="/music.png" aria-label="listeners" alt="listeners" width="32px" height="32px" />
 		<p class="text-lg font-bold">
 			<span class="cc_streaminfo" data-type="listeners" data-username="stef"></span>
 		</p>

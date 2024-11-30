@@ -1,7 +1,29 @@
 <script>
-// @ts-nocheck
+	import { invalidateAll, goto } from '$app/navigation';
+	import { applyAction, deserialize } from '$app/forms';
 
-	export let form;
+	/** @type {{ form: import('./$types').ActionData }} */
+	let { form } = $props();
+
+	/** @param {{ currentTarget: EventTarget & HTMLFormElement}} event */
+	async function handleSubmit(event) {
+		const data = new FormData(event.currentTarget);
+
+		const response = await fetch(event.currentTarget.action, {
+			method: 'POST',
+			body: data
+		});
+
+		/** @type {import('@sveltejs/kit').ActionResult} */
+		const result = deserialize(await response.text());
+
+		if (result.type === 'success') {
+			// rerun all `load` functions, following the successful update
+			await invalidateAll();
+		}
+
+		applyAction(result);
+	}
 </script>
 
 <svelte:head>
@@ -11,9 +33,10 @@
 <div class="container-xl">
 	<div class="h-full w-full p-2 shadow-xl">
 		<div class="flex w-full justify-center">
-		<h1 class="h1 font-serif text-5xl font-semibold">CONTACT</h1>
-	</div>
-		<form method="POST" class="col-span-2 flex w-full flex-col justify-evenly gap-2">
+			<h1 class="h1 font-serif text-5xl font-semibold">CONTACT</h1>
+		</div>
+		<!-- svelte-ignore event_directive_deprecated -->
+		<form method="POST" class="col-span-2 flex w-full flex-col justify-evenly gap-2" on:submit|preventDefault={handleSubmit}>
 			<div class="row-span-2 flex w-full flex-row gap-1">
 				<label for="">Email:</label>
 				<input

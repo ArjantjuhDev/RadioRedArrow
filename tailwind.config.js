@@ -3,8 +3,7 @@ import typography from '@tailwindcss/typography';
 
 /** @type {import('tailwindcss').Config} */
 export default {
-	content: ['./src/**/*.{html,js,svelte,ts}',
-   'node_modules/preline/dist/*.js',],
+	content: ['./src/**/*.{html,js,svelte,ts}'],
 
 	theme: {
 		extend: {},
@@ -26,5 +25,5 @@ export default {
     themes: true,
 	 darkMode: true,
     },
-	plugins: [typography, containerQueries, require('daisyui'),require('preline/plugin')]
+	plugins: [typography, containerQueries, require('daisyui')]
 };

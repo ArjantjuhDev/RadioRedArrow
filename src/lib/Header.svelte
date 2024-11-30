@@ -3,16 +3,16 @@
 		<div class="flex h-full w-full flex-col items-center justify-between">
 			<div class="w-48 justify-start">
 				<a href="/">
-					<img src="/Logo-radio-red-arrow-trans-background.gif" alt="logo" />
+					<img src="/Logo-radio-red-arrow-trans-background.gif" aria-label="logo" alt="logo" />
 				</a>
 			</div>
 		</div>
 	</div>
 	<div class="flex flex-col bg-transparent no-underline">
 		<nav class="navbar navbar-end w-full">
-			<div>
-				<div class="dropdown">
-					<div tabindex="0" role="button" class="m-1 font-bold">Menu</div>
+			<div aria-label="true">
+				<div aria-hidden="false" class="dropdown">
+					<div tabindex="-1" role="button" class="m-1 font-bold">Menu</div>
 					<!-- svelte-ignore a11y_no_noninteractive_tabindex -->
 					<ul
 						tabindex="0"
@@ -33,9 +33,9 @@
 				</div>
 			</div>
 			<div class="divider divider-horizontal"></div>
-			<div>
-				<div class="dropdown dropdown-left">
-					<div tabindex="0" role="button" class="m-1 font-bold">
+			<div aria-label="true">
+				<div aria-hidden="false" class="dropdown dropdown-left">
+					<div tabindex="-1" role="button" class="m-1 font-bold">
 						Theme
 						<svg
 							width="12px"
@@ -66,8 +66,8 @@
 								type="radio"
 								name="theme-dropdown"
 								class="theme-controller btn btn-ghost btn-sm btn-block justify-start"
-								aria-label="Retro"
-								value="retro"
+								aria-label="light"
+								value="light"
 							/>
 						</li>
 						<li>
@@ -75,8 +75,8 @@
 								type="radio"
 								name="theme-dropdown"
 								class="theme-controller btn btn-ghost btn-sm btn-block justify-start"
-								aria-label="Cyberpunk"
-								value="cyberpunk"
+								aria-label="coffee"
+								value="coffee"
 							/>
 						</li>
 						<li>
@@ -84,8 +84,8 @@
 								type="radio"
 								name="theme-dropdown"
 								class="theme-controller btn btn-ghost btn-sm btn-block justify-start"
-								aria-label="Valentine"
-								value="valentine"
+								aria-label="Winter"
+								value="winter"
 							/>
 						</li>
 						<li>
@@ -93,8 +93,8 @@
 								type="radio"
 								name="theme-dropdown"
 								class="theme-controller btn btn-ghost btn-sm btn-block justify-start"
-								aria-label="Aqua"
-								value="aqua"
+								aria-label="business"
+								value="business"
 							/>
 						</li>
 					</ul>

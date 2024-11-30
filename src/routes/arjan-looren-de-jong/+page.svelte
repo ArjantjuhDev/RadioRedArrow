@@ -1,11 +1,11 @@
 <svelte:head>
 	<title>Arjan Looren de Jong</title>
 </svelte:head>
-<div class="flex w-full justify-center">
+<div aria-hidden="true" class="flex w-full justify-center">
 	<h1 class="h1 font-serif text-5xl font-semibold max-tablet:collapse">ARJAN LOOREN DE JONG</h1>
 </div>
 
-<div class="w-full text-wrap text-center">
+<div aria-hidden="true" class="w-full text-wrap text-center">
 	<h3 class="h2 font-serif text-xl font-semibold">DJ HAL</h3>
 	<br />
 	<p class="whitespace-normal">

@@ -2,17 +2,22 @@
 	<title>Over ons</title>
 </svelte:head>
 
-<div class="flex w-full justify-center">
+<div aria-hidden="true" class="flex w-full justify-center">
 	<h1 class="h1 font-serif text-5xl font-semibold">OVER ONS</h1>
 </div>
 <div class="flex h-full w-full flex-col justify-between">
 	<div class="flex w-full flex-row items-center justify-between max-tablet:flex-col">
 		<!-- Stef -->
 		<div class="flex w-[25%] justify-start">
-			<img class="w-48 rounded-lg border" src="/Stef_Lobregt.jpg" alt="DJ Stef" />
+			<img
+				class="w-48 rounded-lg border"
+				src="/Stef_Lobregt.jpg"
+				alt="DJ Stef"
+				aria-label="DJ Stef"
+			/>
 		</div>
 		<div class="flex w-[75%] justify-end">
-			<div class="flex w-full flex-col justify-evenly">
+			<div aria-hidden="true" class="flex w-full flex-col justify-evenly">
 				<div>
 					<!-- svelte-ignore a11y_label_has_associated_control -->
 					<label class="h2 font-serif text-xl font-semibold">DJ STEF</label>
@@ -31,7 +36,7 @@
 	<!-- Arjan -->
 	<div class="flex w-full flex-row items-center justify-between max-tablet:flex-col">
 		<div class="mt-2 flex w-[75%] justify-start">
-			<div class="flex w-full flex-col justify-evenly">
+			<div aria-hidden="true" class="flex w-full flex-col justify-evenly">
 				<!-- svelte-ignore a11y_label_has_associated_control -->
 				<label class="h2 text-right font-serif text-xl font-semibold">DJ HAL</label>
 
@@ -47,7 +52,7 @@
 			</div>
 		</div>
 		<div class="mt-2 flex w-[25%] justify-end">
-			<img class="w-48 rounded-lg border" src="/arjanl.jpg" alt="DJ HAL" />
+			<img class="w-48 rounded-lg border" src="/arjanl.jpg" alt="DJ HAL" aria-label="DJ HAL" />
 		</div>
 	</div>
 </div>

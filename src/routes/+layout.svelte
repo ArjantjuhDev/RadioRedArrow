@@ -4,19 +4,12 @@
 	import Header from '$lib/Header.svelte';
 	import LeftSide from '$lib/LeftSide.svelte';
 	import RightSide from '$lib/RightSide.svelte';
-	import '../styles/app.css';
+	import '../app.css';
 	let { children } = $props();
 </script>
 
 <div
-	class="min-w-screen flex min-h-screen flex-col overflow-y-auto
-  [&::-webkit-scrollbar-thumb]:rounded-full
-  [&::-webkit-scrollbar-thumb]:bg-gray-300
-  dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500
-  [&::-webkit-scrollbar-track]:rounded-full
-  [&::-webkit-scrollbar-track]:bg-gray-100
-  dark:[&::-webkit-scrollbar-track]:bg-neutral-700
-  [&::-webkit-scrollbar]:w-2"
+	class="min-w-screen flex min-h-screen flex-col"
 >
 	<Header />
 	<main class="flex-grow max-tablet:mt-12">
