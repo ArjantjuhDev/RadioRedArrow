@@ -6,7 +6,7 @@
 	<h1 class="h1 font-serif text-5xl font-semibold">OVER ONS</h1>
 </div>
 <div class="flex h-full w-full flex-col justify-between">
-	<div class="flex w-full flex-row items-center justify-between max-tablet:flex-col">
+	<div class="max-mobile:flex-col flex w-full flex-row items-center justify-between">
 		<!-- Stef -->
 		<div class="flex w-[25%] justify-start">
 			<img
@@ -34,7 +34,7 @@
 		</div>
 	</div>
 	<!-- Arjan -->
-	<div class="flex w-full flex-row items-center justify-between max-tablet:flex-col">
+	<div class="max-mobile:flex-col flex w-full flex-row items-center justify-between">
 		<div class="mt-2 flex w-[75%] justify-start">
 			<div aria-hidden="true" class="flex w-full flex-col justify-evenly">
 				<!-- svelte-ignore a11y_label_has_associated_control -->

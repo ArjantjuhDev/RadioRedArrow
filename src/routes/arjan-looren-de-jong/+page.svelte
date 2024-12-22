@@ -2,7 +2,9 @@
 	<title>Arjan Looren de Jong</title>
 </svelte:head>
 <div aria-hidden="true" class="flex w-full justify-center">
-	<h1 class="h1 font-serif text-5xl font-semibold max-tablet:collapse">ARJAN LOOREN DE JONG</h1>
+	<h1 class="h1 max-mobile:collapse max-mobile:text-center font-serif text-5xl font-semibold">
+		ARJAN LOOREN DE JONG
+	</h1>
 </div>
 
 <div aria-hidden="true" class="w-full text-wrap text-center">

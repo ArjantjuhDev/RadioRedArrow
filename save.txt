@@ -1,0 +1,61 @@
+<li>
+							<!-- svelte-ignore a11y_label_has_associated_control -->
+							<label
+								class="max-mobile:text-xl font-bold uppercase underline underline-offset-1 max-tablet:text-xl"
+								>Light</label
+							>
+						</li>
+						<li>
+							<input
+								type="radio"
+								name="theme-dropdown"
+								class="max-mobile:text-xl theme-controller btn btn-ghost btn-sm btn-block justify-start max-tablet:text-xl"
+								aria-label="Light"
+								value="light"
+							/>
+						</li>
+						<li>
+							<input
+								type="radio"
+								name="theme-dropdown"
+								class="max-mobile:text-xl theme-controller btn btn-ghost btn-sm btn-block justify-start max-tablet:text-xl"
+								aria-label="Fantasy"
+								value="fantasy"
+							/>
+						</li>
+						<li>
+							<input
+								type="radio"
+								name="theme-dropdown"
+								class="max-mobile:text-xl theme-controller btn btn-ghost btn-sm btn-block justify-start max-tablet:text-xl"
+								aria-label="Nord"
+								value="nord"
+							/>
+						</li>
+						<li>
+							<input
+								type="radio"
+								name="theme-dropdown"
+								class="max-mobile:text-xl theme-controller btn btn-ghost btn-sm btn-block justify-start max-tablet:text-xl"
+								aria-label="Bumblebee"
+								value="bumblebee"
+							/>
+						</li>
+						<li>
+							<input
+								type="radio"
+								name="theme-dropdown"
+								class="max-mobile:text-xl theme-controller btn btn-ghost btn-sm btn-block justify-start max-tablet:text-xl"
+								aria-label="CMYK"
+								value="cmyk"
+							/>
+						</li>
+						<li>
+							<input
+								type="radio"
+								name="theme-dropdown"
+								class="max-mobile:text-xl theme-controller btn btn-ghost btn-sm btn-block justify-start max-tablet:text-xl"
+								aria-label="Winter"
+								value="winter"
+							/>
+						</li>

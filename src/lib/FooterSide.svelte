@@ -6,7 +6,7 @@
 </script>
 
 <footer
-	class="footer inset-x-0 bottom-0 mb-1
+	class="max-mobile:hidden footer inset-x-0 bottom-0 mb-1
 			 items-center
 			 justify-center
 			 bg-transparent

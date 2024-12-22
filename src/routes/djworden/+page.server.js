@@ -1,10 +1,6 @@
-/** @type {import('@sveltejs/adapter-vercel').Config} */
-export const config = {
-	runtime: 'nodejs20.x'
-};
-
-import { PRIVATE_SMTP_EMAIL } from "$env/static/private";
-import transporter from "$lib/server/server.js";
+// @ts-ignore
+import { PRIVATE_DJ_SMTP_EMAIL } from "$env/static/private";
+import transporter from "$lib/server/server-dj.js";
 
 export const actions = {
     // @ts-ignore
@@ -34,7 +30,7 @@ export const actions = {
             <p>Team Radio Red Arrow</p>`;
 
             const message = {
-                to: PRIVATE_SMTP_EMAIL,
+                to: PRIVATE_DJ_SMTP_EMAIL,
                 bcc: email,
                 subject: subject,
                 email: email,

@@ -1,5 +1,5 @@
 <script>
-import { invalidateAll, goto } from '$app/navigation';
+	import { invalidateAll, goto } from '$app/navigation';
 	import { applyAction, deserialize } from '$app/forms';
 
 	/** @type {{ form: import('./$types').ActionData }} */
@@ -30,62 +30,70 @@ import { invalidateAll, goto } from '$app/navigation';
 	<title>DJ Worden?</title>
 </svelte:head>
 
-<div class="container">
+<div>
 	<div class="flex w-full justify-center">
 		<h1 class="h1 font-serif text-5xl font-semibold">DJ WORDEN?</h1>
 	</div>
-	<div class="flex h-full w-full justify-between gap-2 p-2 shadow-xl">
-		<!-- svelte-ignore event_directive_deprecated -->
-		<form method="POST" class="col-span-2 flex w-[400px] flex-col justify-evenly gap-2"  on:submit|preventDefault={handleSubmit}>
-			<div class="row-span-2 flex w-full flex-row items-center gap-x-8 gap-y-2">
-				<label for="">Naam:</label>
-				<input
-					class="input input-md input-bordered h-10 w-full max-w-xs"
-					name="name"
-					type="text"
-					value=""
-				/>
-			</div>
-			<div class="row-span-2 flex w-full flex-row items-center gap-x-8 gap-y-2">
-				<label for="">Telefoon:</label>
-				<input
-					class="input input-md input-bordered h-10 w-full max-w-xs"
-					name="telephone"
-					type="tel"
-					value=""
-				/>
-			</div>
-			<div class="row-span-2 flex w-full flex-row items-center gap-x-8 gap-y-2">
-				<label for="">Email:</label>
-				<input
-					class="input input-md input-bordered h-10 w-full max-w-xs"
-					name="email"
-					type="text"
-					value=""
-				/>
-			</div>
-			<div class="row-span-2 flex w-full flex-row items-center gap-x-8 gap-y-2">
-				<label for="">Onderwerp:</label>
-				<input
-					class="input input-md input-bordered h-10 w-full max-w-xs"
-					name="subject"
-					type="text"
-					value="Ik wil graag DJ worden."
-				/>
-			</div>
-			<div class="row-span-2 flex w-full flex-row items-center gap-x-8 gap-y-2">
-				<label for="">Motivatie:</label>
-				<textarea
-					class="textarea textarea-bordered textarea-md h-16 w-full max-w-xs"
-					name="body"
-					value=""
-				></textarea>
-			</div>
-			<div>
-				<button class="btn p-2" type="submit">Send</button>
-			</div>
-		</form>
-		<p class="success text-success">{form?.success || ''}</p>
+	<div class="mt-2 flex w-full justify-center">
+		<div
+			class="max-mobile:w-full flex h-full w-2/5 flex-col justify-center gap-2 p-2 shadow-xl max-tablet:w-full"
+		>
+			<!-- svelte-ignore event_directive_deprecated -->
+			<form
+				method="POST"
+				class="col-span-2 flex flex-col justify-evenly gap-2"
+				on:submit|preventDefault={handleSubmit}
+			>
+				<div class="row-span-2 flex w-full flex-row items-center gap-x-8 gap-y-2">
+					<label for="">Naam:</label>
+					<input
+						class="input input-md input-bordered h-10 w-full max-w-xs"
+						name="name"
+						type="text"
+						value=""
+					/>
+				</div>
+				<div class="row-span-2 flex w-full flex-row items-center gap-x-8 gap-y-2">
+					<label for="">Telefoon:</label>
+					<input
+						class="input input-md input-bordered h-10 w-full max-w-xs"
+						name="telephone"
+						type="tel"
+						value=""
+					/>
+				</div>
+				<div class="row-span-2 flex w-full flex-row items-center gap-x-8 gap-y-2">
+					<label for="">Email:</label>
+					<input
+						class="input input-md input-bordered h-10 w-full max-w-xs"
+						name="email"
+						type="text"
+						value=""
+					/>
+				</div>
+				<div class="row-span-2 flex w-full flex-row items-center gap-x-8 gap-y-2">
+					<label for="">Onderwerp:</label>
+					<input
+						class="input input-md input-bordered h-10 w-full max-w-xs"
+						name="subject"
+						type="text"
+						value="Ik wil graag DJ worden."
+					/>
+				</div>
+				<div class="row-span-2 flex w-full flex-row items-center gap-x-8 gap-y-2">
+					<label for="">Motivatie:</label>
+					<textarea
+						class="textarea textarea-bordered textarea-md h-16 w-full max-w-xs"
+						name="body"
+						value=""
+					></textarea>
+				</div>
+				<div>
+					<button class="btn p-2" type="submit">Send</button>
+				</div>
+			</form>
+			<p class="success text-success">{form?.success || ''}</p>
+		</div>
 	</div>
 </div>
 

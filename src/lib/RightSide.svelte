@@ -1,17 +1,26 @@
-<div class="flex w-full flex-col justify-between">
+<script>
+	function radioNetButton() {
+		window.open('https://www.radio.net/s/radio-red-arrow', '_blank');
+	}
+</script>
+
+<div class="max-mobile:mt-4 max-tablet:mt-4 flex w-full flex-col justify-between">
 	<div class="flex w-full justify-center">
 		<div>
 			<!-- svelte-ignore a11y_missing_attribute -->
 			<img
-				class="cc_streaminfo h-32 w-32 rounded-md border border-white"
+				class="cc_streaminfo h-36 w-36 rounded-md border border-white shadow-xl"
 				data-type="trackimageurl"
 				data-username="stef"
 				aria-label="Now playing"
 			/>
 		</div>
 	</div>
-	<div class="mt-3 flex w-full justify-center">
-		<div class="flex w-3/4 flex-row justify-between max-tablet:w-full" id="cc_tunein">
+	<div class="my-4 flex w-full justify-center">
+		<div
+			class="max-mobile:mx-1 max-mobile:w-full flex w-3/4 flex-row justify-between"
+			id="cc_tunein"
+		>
 			<a href="https://cast6.asurahosting.com/tunein/stef.pls"
 				><img
 					class="w-10"
@@ -59,10 +68,10 @@
 			>
 		</div>
 	</div>
-	<div class="mt-3 flex w-full justify-center max-tablet:w-full">
-		<span class="cc_streaminfo" data-type="song" data-username="stef">Loading ...</span>
+	<div class="max-mobile:w-full flex w-full justify-center">
+		<span class="cc_streaminfo text-white" data-type="song" data-username="stef">Loading ...</span>
 	</div>
-	<div class="mt-3 flex w-full justify-center max-tablet:w-full">
+	<div class="max-mobile:w-full mt-3 flex w-full justify-center">
 		<!-- Audio player -->
 		<audio controls preload="metadata" autoplay loop>
 			<source src="https://cast6.asurahosting.com/proxy/stef/stream" type="audio/mpeg" />
@@ -70,6 +79,18 @@
 		</audio>
 	</div>
 	<script type="text/javascript" src="https://cast6.asurahosting.com/system/streaminfo.js"></script>
+
+	<div class="mt-4 flex w-full justify-center">
+		<div class="flex flex-col items-center">
+			<!-- svelte-ignore a11y_label_has_associated_control -->
+			<label class="mb-2 font-sans text-white underline underline-offset-1"
+				>Nu te beluisteren via</label
+			>
+			<button onclick={radioNetButton} class="btn rounded-lg bg-base-200 px-10 py-2">
+				Radio.net</button
+			>
+		</div>
+	</div>
 </div>
 
 <style>

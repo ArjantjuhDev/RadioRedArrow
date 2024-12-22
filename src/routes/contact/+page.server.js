@@ -1,10 +1,4 @@
 
-
-/** @type {import('@sveltejs/adapter-vercel').Config} */
-export const config = {
-	runtime: 'nodejs20.x'
-};
-
 // @ts-ignore
 import { PRIVATE_SMTP_EMAIL } from "$env/static/private";
 import transporter from "$lib/server/server.js";
