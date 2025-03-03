@@ -31,8 +31,8 @@
 </svelte:head>
 
 <div>
-	<div class="flex w-full justify-center">
-		<h1 class="h1 font-serif text-5xl font-semibold">DJ WORDEN?</h1>
+	<div class="flex w-full justify-center max-mobile:mt-28">
+		<h1 class="h1 font-serif text-5xl font-semibold max-mobile:text-2xl">DJ WORDEN?</h1>
 	</div>
 	<div class="mt-2 flex w-full justify-center">
 		<div

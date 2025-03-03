@@ -1,11 +1,10 @@
 
 
-/** @type {import('@sveltejs/adapter-vercel').Config} */
-export const config = {
-	runtime: 'nodejs23.x'
-};
+// /** @type {import('@sveltejs/adapter-vercel').Config} */
+// export const config = {
+// 	runtime: 'edge',
+// };
  import nodemailer from "nodemailer";
-// @ts-ignore
 import { PRIVATE_DJ_SMTP_EMAIL, PRIVATE_DJ_SMTP_EMAIL_PASSWORD } from "$env/static/private";
 
 // const nodemailer = require('nodemailer');
@@ -22,7 +21,7 @@ let transporter = nodemailer.createTransport({
 export default transporter;
 
 
-// @ts-ignore
+
 export async function POST({ request }) {
   const { email, subject, telephone, name, html } = await request.json();
 
@@ -31,7 +30,6 @@ export async function POST({ request }) {
       to: PRIVATE_DJ_SMTP_EMAIL,
                 bcc: email,
                 subject: subject,
-                // @ts-ignore
                 email: email,
                 telephone: telephone,
                 name: name,

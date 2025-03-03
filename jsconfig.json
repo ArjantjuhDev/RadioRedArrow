@@ -10,14 +10,14 @@
 		"sourceMap": true,
 		"strict": true,
 		"moduleResolution": "bundler",
-		"paths": {
-			"$lib": [
-				"./src/lib"
-			],
-			"$lib/*": [
-				"./src/lib/*"
-			]
-		}
+		// "paths": {
+		// 	"$lib": [
+		// 		"./src/lib"
+		// 	],
+		// 	"$lib/*": [
+		// 		"./src/lib/*"
+		// 	]
+		// }
 	},
 	"types": [
 		"node"

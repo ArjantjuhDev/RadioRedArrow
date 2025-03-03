@@ -1,12 +1,8 @@
-
-// @ts-ignore
 import { PRIVATE_SMTP_EMAIL } from "$env/static/private";
 import transporter from "$lib/server/server.js";
 
-
-
 export const actions = {
-    // @ts-ignore
+    // @ts-nocheck
     default: async ({ request }) => {
         try {
             const formData = await request.formData();
@@ -29,11 +25,9 @@ export const actions = {
                 text: body,
                 html: html,
             };
-
-            // @ts-ignore
-            const sendEmail = async (message) => {
+            
+            const sendEmail = async (message: any) => {
                 await new Promise((resolve, reject) => {
-                    // @ts-ignore
                     transporter.sendMail(message, (err, info) => {
                         if (err) {
                             console.error(err);
@@ -54,6 +48,6 @@ export const actions = {
             console.error(error);
         }
     }
-// @ts-ignore
+
 };
 

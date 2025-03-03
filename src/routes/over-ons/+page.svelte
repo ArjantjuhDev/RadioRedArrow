@@ -2,9 +2,10 @@
 	<title>Over ons</title>
 </svelte:head>
 
-<div aria-hidden="true" class="flex w-full justify-center">
-	<h1 class="h1 font-serif text-5xl font-semibold">OVER ONS</h1>
+<div aria-hidden="true" class="max-mobile:mt-28 flex w-full justify-center">
+	<h1 class="h1 max-mobile:text-2xl font-serif text-5xl font-semibold">OVER ONS</h1>
 </div>
+<div class="divider my-1 w-full text-3xl font-bold"></div>
 <div class="flex h-full w-full flex-col justify-between">
 	<div class="max-mobile:flex-col flex w-full flex-row items-center justify-between">
 		<!-- Stef -->

@@ -1,22 +1,26 @@
 import { fontFamily } from 'tailwindcss/defaultTheme';
 
 /** @type {import('tailwindcss').Config} */
-const config = {
-	darkMode: 'media',
+module.exports = {
+	darkMode: 'sunset', // or 'media' or 'class'
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	daisyui: {
-		themes: true,
-		darkTheme: 'dark',
-		styled: true
+		themes: ['dark', 'sunset', 'night', 'dim', 'forest', 'luxury', 'dracula'],
+		darkTheme: true,
+		styled: true,
+		base: true
 	},
 	plugins: [require('daisyui')],
 	theme: {
+		screens: {
+			mobile: '425px',
+			tablet: '768px',
+			laptop: '1440px',
+			desktop: '1930px'
+		},
 		container: {
 			center: true,
-			padding: '2rem',
-			screens: {
-				'2xl': '1400px'
-			}
+			padding: '2rem'
 		},
 		extend: {
 			// 	colors: {
@@ -65,5 +69,3 @@ const config = {
 		}
 	}
 };
-
-export default config;

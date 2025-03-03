@@ -1,8 +1,8 @@
 <svelte:head>
 	<title>Stef Lobregt</title>
 </svelte:head>
-<div aria-hidden="true" class="flex w-full justify-center">
-	<h1 class="h1 font-serif text-5xl font-semibold">STEF LOBREGT</h1>
+<div aria-hidden="true" class="flex w-full justify-center max-mobile:mt-28">
+	<h1 class="h1 font-serif text-5xl font-semibold max-mobile:text-2xl">STEF LOBREGT</h1>
 </div>
 
 <div aria-hidden="true" class="w-full text-wrap text-center">

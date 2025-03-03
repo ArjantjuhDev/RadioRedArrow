@@ -2,19 +2,20 @@
 	import { BackgroundGradient } from '$lib/ui/BackgroundGradient';
 	let autodjimg = '/autodj.jpg';
 	let stefimg = '/Stef_Lobregt.jpg';
+	let sjonimg = '/John-Lobregt.jpg';
 </script>
 
 <svelte:head>
 	<title>Programma</title>
 </svelte:head>
 
-<div aria-hidden="true" class="mb-4 flex w-full justify-center">
-	<h1 class="h1 font-serif text-5xl font-semibold">PROGRAMMA</h1>
+<div aria-hidden="true" class="mb-4 flex w-full justify-center max-mobile:mt-28">
+	<h1 class="h1 font-serif text-5xl font-semibold max-mobile:text-2xl">PROGRAMMA</h1>
 </div>
 
 <BackgroundGradient
 	className="mx-auto flex w-full flex-col"
-	containerClass="flex mt-5 w-full items-center justify-center"
+	containerClass="flex mt-8 w-full items-center justify-center"
 	animate={true}
 >
 	<div class="h-[500px] w-full overflow-x-auto rounded-lg border bg-base-100 shadow-lg">
@@ -59,19 +60,19 @@
 						<div class="flex items-center gap-3">
 							<div class="avatar">
 								<div class="mask mask-squircle h-12 w-12">
-									<img src={autodjimg} alt="Avatar Tailwind CSS Component" />
+									<img src={sjonimg} alt="Avatar Tailwind CSS Component" />
 								</div>
 							</div>
 							<div>
-								<div class="font-bold">AUTO DJ</div>
-								<div class="text-sm opacity-50">Offline Studio</div>
+								<div class="font-bold uppercase">Dj Sjon</div>
+								<div class="text-sm opacity-50">Live Studio</div>
 							</div>
 						</div></td
 					>
 					<!-- ONAIR -->
-					<td>18:00 / 23:00</td>
+					<td>19:00 / 22:00</td>
 					<!-- PROGRAMMA -->
-					<td>Gevarieerd</td>
+					<td>Live uit zijn studio.</td>
 				</tr>
 				<!-- row Maandag -->
 				<tr>

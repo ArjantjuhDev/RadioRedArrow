@@ -31,8 +31,8 @@
 </svelte:head>
 
 <div>
-	<div class="flex w-full justify-center">
-		<h1 class="h1 font-serif text-5xl font-semibold">CONTACT</h1>
+	<div class="flex w-full justify-center max-mobile:mt-28">
+		<h1 class="h1 font-serif text-5xl font-semibold max-mobile:text-2xl">CONTACT</h1>
 	</div>
 	<div class="flex w-full justify-center mt-2">
 		<div class="flex h-full w-2/5 flex-col justify-center gap-2 p-2 shadow-xl max-mobile:w-full max-tablet:w-full">

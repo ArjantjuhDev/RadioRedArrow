@@ -9,25 +9,25 @@
 	let { children } = $props();
 </script>
 
-<div class="min-w-screen flex min-h-screen flex-col">
+<div class="flex min-h-screen max-w-[98%] flex-col">
 	<Header />
 
-	<main class="max-mobile:mt-12 -mt-12 flex-grow">
+	<main class="mobile:mt-12 -mt-12 flex-grow">
 		<div
 			class="max-tablet:w-full max-tablet:flex-col max-tablet:items-center max-tablet:justify-center
 			max-mobile:w-full max-mobile:flex-col max-mobile:items-center max-mobile:justify-center row-span-3
 			flex w-full flex-row justify-evenly"
 		>
-			<div class="max-tablet:w-full max-mobile:w-full w-1/4 px-2">
+			<div class="max-tablet:w-full max-mobile:w-full max-mobile:order-2 max-desktop:order-1 w-1/4 px-2">
 				<LeftSide />
 			</div>
 
-			<div class="max-tablet:w-full max-mobile:w-full w-1/2 px-2">
+			<div class="max-tablet:w-full max-mobile:w-full max-mobile:order-1 max-desktop:order-2 w-1/2 px-2">
 				<div>
 					{@render children()}
 				</div>
 			</div>
-			<div class="max-tablet:w-full max-mobile:w-full w-1/4 px-2">
+			<div class="max-tablet:w-full max-mobile:w-full max-mobile:order-3 max-desktop:order-3 w-1/4 px-2">
 				<RightSide />
 			</div>
 		</div>

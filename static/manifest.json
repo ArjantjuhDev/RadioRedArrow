@@ -1,0 +1,111 @@
+{
+    "name": "Radio Red Arrow",
+    "short_name": "RRA",
+    "description": "A radio streaming application",
+    "version": "2.1.1",
+    "manifest_version": 3,
+    "lang": "nl-EU",
+    "default_locale": "nl-EU",
+    "orientation": "landscape",
+    "incognito": "split",
+    "start_url": "/",
+    "display": "standalone",
+    "theme": {
+        "colors": {
+            "frame": "#303030",
+            "frame_inactive": "#303030",
+            "ntp_background": "#303030",
+            "ntp_card_background": "#b80b0b",
+            "ntp_text": "#ffffff",
+            "tab_background": "#303030",
+            "tab_text": "#ffffff",
+            "toolbar_text": "#ffffff",
+            "toolbar": "#303030",
+            "accent_color": "#303030",
+            "icons": "#b80b0b",
+            "icons_attention": "#b80b0b",
+            "popup": "black",
+     "popup_text": "white",
+     "popup_border": "red",
+      "popup_highlight": "red",
+     "popup_highlight_text": "white"
+        }
+    },
+    "web_app_manifest": true,
+    "offline_enabled": true,
+    "meta": {
+        "developer": {
+            "author": "Arjan Looren de Jong",
+            "email": "arjanloorendejong@hotmail.com"
+        },
+        "updated": "2025-03-01"
+    },
+    "permissions": [
+        "activeTab",
+        "*://radioredarrow.nl/*",
+        "tabs",
+       "audioCapture",
+       "notifications",
+       "declarativeNetRequestWithHostAccess",
+       "declarativeNetRequest",
+       "contextualIdentities",
+         "webNavigation",
+         "webRequest",
+         "browserSettings",
+         "browsingData",
+         "cookies",
+       "storage"
+    ],
+    "actions": {
+        "default_title": "Radio Red Arrow",
+        "default_icon": "favicon.png"
+    },
+    "service_worker": {
+        "src": "service-worker.js",
+        "scope": "/",
+        "use_cache": true
+    },
+    "start_uses_service_worker": true,
+
+    "htaccess": {
+        "src": ".htaccess",
+        "cache": "public, max-age=31536000",
+        "expires": "access plus 1 year"
+    },
+
+    "icons": [
+        {
+            "sizes": "512x512",
+            "src": "icon512.png",
+            "type": "image/png"
+        },
+        {
+            "sizes": "192x192",
+            "src": "icon192.png",
+            "type": "image/png"
+        },
+        {
+            "sizes": "180x180",
+            "src": "icon180.png",
+            "type": "image/png"
+        },
+        {
+            "sizes": "32x32",
+            "src": "icon32.png",
+            "type": "image/png"
+        },
+        {
+            "sizes": "16x16",
+            "src": "icon16.png",
+            "type": "image/png"
+        }
+    ],
+    "id": "/",
+  "display_override": [
+    "window-controls-overlay",
+    "browser",
+    "standalone",
+    "minimal-ui",
+    "fullscreen"
+  ]
+}
