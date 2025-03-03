@@ -95,7 +95,7 @@
 			<button
 				aria-label="goto radionet"
 				onclick={radioNetButton}
-				class="btn rounded-lg bg-base-200 px-10 py-2"
+				class="btn hover:outline-1 hover:outline hover:bg-neutral-200 hover:text-black rounded-lg bg-base-200 px-10 py-2"
 			>
 				Radio.net</button
 			>

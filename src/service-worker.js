@@ -1,4 +1,4 @@
-import {build, files, prerendered, version} from '$service-worker';
+import {build, files, prerendered, version, } from '$service-worker';
 import { precacheAndRoute } from 'workbox-precaching';
 
 const precache_list = [

@@ -65,7 +65,7 @@
 	<!-- svelte-ignore a11y_interactive_supports_focus -->
 
 	<Motion
-		animate={{ x: -370 }}
+		animate={{ x: -380 }}
 		initial={{ x: 0 }}
 		transition={{ ease: 'backOut' }}
 		whileHover={{ x: 0 }}
@@ -78,13 +78,14 @@
 						window.screen('/#');
 					}}
 					id="open_preferences_center"
-					class="btn m-4 w-[100%] rounded-xl px-10 py-2 text-sm font-medium text-neutral-400"
+					class="btn m-4 w-[100%] hover:btn-outline btn-ghost uppercase font-bold rounded-xl px-10 py-2 text-sm"
 				>
-					Cookies preferences</button
+					Cookies options</button
 				>
 			</div>
-			<div class="my-4 ml-12 flex w-[12%] justify-end">
-				<img src="/right-arrow.png" alt="right-arrow" width="60px" height="60px" />
+			<div class="my-5 ml-8 flex w-[10%] h-[10%] justify-end px-2 py-4 outline outline-2 rounded-xl" aria-label="Navigation to preferences center">
+				<!-- <img src="/right-arrow.png" alt="right-arrow"  /> -->
+				<i class="fa-solid fa-arrow-right fa-2xl"></i>
 			</div>
 		</div>
 	</Motion>

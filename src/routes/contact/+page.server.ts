@@ -1,4 +1,4 @@
-import { PRIVATE_SMTP_EMAIL } from "$env/static/private";
+import { VITE_SMTP_EMAIL } from "$env/static/private";
 import transporter from "$lib/server/server.js";
 
 export const actions = {
@@ -19,7 +19,7 @@ export const actions = {
             <p>Team Radio Red Arrow</p>`;
 
             const message = {
-                to: PRIVATE_SMTP_EMAIL,
+                to: VITE_SMTP_EMAIL,
                 bcc: email,
                 email: email,
                 text: body,

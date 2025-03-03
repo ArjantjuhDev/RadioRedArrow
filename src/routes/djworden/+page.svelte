@@ -1,20 +1,21 @@
-<script>
+<script lang="ts">
 	import { invalidateAll, goto } from '$app/navigation';
-	import { applyAction, deserialize } from '$app/forms';
+	import { applyAction, deserialize, enhance } from '$app/forms';
 
-	/** @type {{ form: import('./$types').ActionData }} */
+	
 	let { form } = $props();
 
-	/** @param {{ currentTarget: EventTarget & HTMLFormElement}} event */
-	async function handleSubmit(event) {
-		const data = new FormData(event.currentTarget);
+	
+	async function handleSubmit(event: SubmitEvent & { currentTarget: EventTarget & HTMLFormElement}) {
+		event.preventDefault();
+		const data = new FormData(event.currentTarget as HTMLFormElement);
 
-		const response = await fetch(event.currentTarget.action, {
+		const response = await fetch((event.currentTarget as HTMLFormElement).action, {
 			method: 'POST',
 			body: data
 		});
 
-		/** @type {import('@sveltejs/kit').ActionResult} */
+		
 		const result = deserialize(await response.text());
 
 		if (result.type === 'success') {
@@ -36,13 +37,13 @@
 	</div>
 	<div class="mt-2 flex w-full justify-center">
 		<div
-			class="max-mobile:w-full flex h-full w-2/5 flex-col justify-center gap-2 p-2 shadow-xl max-tablet:w-full"
+			class="max-mobile:w-full flex h-full w-2/5 flex-col outline outline-1 rounded-lg bg-base-300 justify-center gap-2 p-2 shadow-xl max-tablet:w-full"
 		>
 			<!-- svelte-ignore event_directive_deprecated -->
 			<form
 				method="POST"
-				class="col-span-2 flex flex-col justify-evenly gap-2"
-				on:submit|preventDefault={handleSubmit}
+				class="col-span-2 flex flex-col pt-2 justify-evenly gap-2"
+				onsubmit={handleSubmit}
 			>
 				<div class="row-span-2 flex w-full flex-row items-center gap-x-8 gap-y-2">
 					<label for="">Naam:</label>
@@ -89,7 +90,7 @@
 					></textarea>
 				</div>
 				<div>
-					<button class="btn p-2" type="submit">Send</button>
+					<button class="btn mt-2 px-5 btn-outline" type="submit">Send</button>
 				</div>
 			</form>
 			<p class="success text-success">{form?.success || ''}</p>
@@ -166,3 +167,8 @@
 		color: #0a5;
 	}
 </style> -->
+<style>
+	.success {
+		color: #0a5;
+	}
+</style>

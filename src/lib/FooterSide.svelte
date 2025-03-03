@@ -23,7 +23,7 @@
 		class="ml-64 grid-flow-col items-center justify-center gap-4 md:place-self-center md:justify-self-end"
 	>
 		<!-- <img src="/music.png" aria-label="listeners" alt="listeners" width="32px" height="32px" /> -->
-		<p class="text-lg font-bold">
+		<p class="text-lg font-bold text-current">
 			<i class="fa-solid fa-headphones mr-2" width="32px" height="32px" aria-label="listeners"></i>
 			<span class="cc_streaminfo" data-type="listeners" data-username="stef"></span>
 		</p>
